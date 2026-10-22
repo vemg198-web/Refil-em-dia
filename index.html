@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Refil em Dia — Atualizado</title>
+<title>Refil em Dia — 50 Clientes Belo Horizonte</title>
 <style>
 :root{--b:#0756a8;--p:#eaf5ff;--bg:#f4f8fc;--ink:#183047;--mut:#64798c;--line:#dce6ef}
 *{box-sizing:border-box}body{margin:0;font:15px system-ui,Arial;background:var(--bg);color:var(--ink)}header{background:linear-gradient(120deg,#06458b,#0879d4);color:#fff;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header h1{margin:0;font-size:25px}header p{margin:4px 0 0;color:#dceeff;font-size:13px}.wrap{max-width:1300px;margin:auto;padding:22px 4%;display:grid;grid-template-columns:190px 1fr;gap:20px}nav{display:flex;flex-direction:column;gap:7px}button{border:0;border-radius:9px;padding:10px 13px;cursor:pointer;font-weight:700;background:var(--b);color:#fff}button.alt{background:#fff;color:var(--b);border:1px solid #bdd6ec}button.red{background:#fff0ef;color:#a52222}nav button{text-align:left;background:transparent;color:#4b6378}nav button.active,nav button:hover{background:#e2f1ff;color:var(--b)}main{min-width:0}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}.head h2{margin:0;font-size:25px}.muted{color:var(--mut);font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:17px}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:16px;box-shadow:0 5px 20px #173b5c0b}.card small{color:var(--mut)}.card strong{display:block;font-size:28px;margin-top:7px}.panel h3{margin:0 0 13px}.row{display:flex;gap:9px;flex-wrap:wrap}.row input,.row select{flex:1;min-width:180px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-size:12px;font-weight:700;color:#526a80;margin-bottom:5px}.field input,.field select,.field textarea,input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 11px;font:inherit}.field textarea{min-height:78px;resize:vertical}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}th{color:var(--mut);font-size:12px}.badg{display:inline-block;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700}.ok{background:#e7f8ee;color:#187a3e}.warn{background:#fff6e5;color:#a36200}.crit{background:#ffebe8;color:#b3261e}.space{height:12px}.hidden{display:none!important}@media(max-width:900px){.wrap{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}}
@@ -11,7 +11,7 @@
 <body>
 <header>
   <div>
-    <h1>Refil em Dia</h1>
+    <h1>Refil em Dia — Gestão de Purificadores</h1>
     <p>Controle de troca de elementos filtrantes de purificadores de água</p>
   </div>
   <div>
@@ -26,7 +26,6 @@
     <button id="tab-dash" class="active" onclick="mudarAba('dash')">Painel principal</button>
     <button id="tab-clientes" onclick="mudarAba('clientes')">Clientes</button>
     <button id="tab-purificadores" onclick="mudarAba('purificadores')">Purificadores</button>
-
     <button id="tab-trocas" onclick="mudarAba('trocas')">Histórico de Trocas</button>
   </nav>
 
@@ -232,24 +231,83 @@ let state = {
   trocas: []
 };
 
+const empresasBH = [
+  "Hospital Mater Dei", "Hospital Felício Rocho", "Hospital Madre Teresa", "Hospital Lifecenter", "Hospital Belo Horizonte",
+  "Hospital da Baleia", "Hospital Luxemburgo", "Hospital Vera Cruz", "Hospital São Lucas", "Hospital Metropolitano Odilon Behrens",
+  "Hermes Pardini", "Laboratório São Marcos", "Unimed-BH", "Rede Paulo de Tarso", "Clínica Orizonti",
+  "UFMG", "PUC Minas - Coração Eucarístico", "Centro Universitário UniBH", "Centro Universitário Newton Paiva", "UNA - Campus Aimorés",
+  "Colégio Santo Agostinho", "Colégio Bernoulli", "Coleguium Rede de Ensino", "Colégio Arnaldo", "Colégio Marista Dom Silvério",
+  "Colégio Magnum", "Colégio Santa Doroteia", "Minas Tênis Clube", "Bodytech - Belo Horizonte", "Smart Fit - Belo Horizonte",
+  "Pratique Fitness", "Contorno do Corpo", "Drogaria Araujo", "Drogaria Clara", "Supermercados Verdemar",
+  "Super Nosso", "Apoio Mineiro", "Mercado Central de Belo Horizonte", "Shopping Pátio Savassi", "DiamondMall",
+  "BH Shopping", "Minas Shopping", "Boulevard Shopping Belo Horizonte", "Shopping Cidade", "Expominas",
+  "Sebrae Minas", "FIEMG", "CDL Belo Horizonte", "Localiza", "MRV Engenharia"
+];
+
+function gerarDadosIniciais50() {
+  const datas = ["2026-08-15", "2026-09-01", "2026-09-20", "2026-10-01", "2026-10-10", "2026-04-10", "2026-05-15", "2026-03-20", "2026-02-10", "2026-01-15"];
+  
+  state.clientes = [];
+  state.purificadores = [];
+  state.trocas = [];
+
+  empresasBH.forEach((emp, i) => {
+    let idNum = i + 1;
+    let cId = "c" + idNum;
+    let pId = "p" + idNum;
+    let tId = "t" + idNum;
+    let dt = datas[i % datas.length];
+
+    state.clientes.push({
+      id: cId,
+      nome: emp,
+      tipo: "Comercial",
+      tel: "(31) 3" + String(100 + idNum).padStart(3, '0') + "-" + String(1000 + idNum).padStart(4, '0'),
+      email: "contato@" + emp.toLowerCase().replace(/[^a-z0-9]/g, '').slice(0, 15) + ".com.br",
+      cidade: "Belo Horizonte",
+      bairro: "Centro / BH",
+      obs: "Cliente de prospecção comercial"
+    });
+
+    state.purificadores.push({
+      id: pId,
+      clienteId: cId,
+      local: "Recepção / Pátio Principal",
+      marca: i % 2 === 0 ? "IBBL" : "Soft Everest",
+      modelo: i % 2 === 0 ? "FR600" : "Fit",
+      modeloRefil: i % 2 === 0 ? "C+3 Original" : "2in1 Soft",
+      validadeMeses: 6,
+      dataUltimaTroca: dt,
+      dataInstalacao: "2025-01-10"
+    });
+
+    state.trocas.push({
+      id: tId,
+      puriId: pId,
+      dataTroca: dt,
+      validadeMeses: 6,
+      modeloRefil: i % 2 === 0 ? "C+3 Original" : "2in1 Soft",
+      tecnico: "Equipe Refil em Dia",
+      obs: "Manutenção e troca efetuada"
+    });
+  });
+}
+
 function carregar() {
   let s = localStorage.getItem('refil_em_dia_db');
   if(s) {
-    try { state = JSON.parse(s); } catch(e){}
+    try { 
+      state = JSON.parse(s);
+      if(!state.clientes || state.clientes.length < 50) {
+        gerarDadosIniciais50();
+        salvar();
+      }
+    } catch(e){
+      gerarDadosIniciais50();
+      salvar();
+    }
   } else {
-    // Dados de exemplo
-    state.clientes = [
-      { id: 'c1', nome: 'Clínica Sorriso Leve', tipo: 'Comercial', tel: '(31) 98888-1111', email: 'contato@sorrisoleve.com', cidade: 'Belo Horizonte', bairro: 'Savassi', obs: 'Trocar refil fora do horário de atendimento' },
-      { id: 'c2', nome: 'Mariana Silva', tipo: 'Residencial', tel: '(31) 99777-2222', email: 'mari.silva@email.com', cidade: 'Contagem', bairro: 'Eldorado', obs: 'Ligar antes de ir' }
-    ];
-    state.purificadores = [
-      { id: 'p1', clienteId: 'c1', local: 'Recepção', marca: 'IBBL', modelo: 'FR600', modeloRefil: 'C+3 Original', validadeMeses: 6, dataUltimaTroca: '2025-11-10', dataInstalacao: '2024-01-15' },
-      { id: 'p2', clienteId: 'c2', local: 'Cozinha', marca: 'Soft Everest', modelo: 'Fit', modeloRefil: '2in1 Soft', validadeMeses: 9, dataUltimaTroca: '2025-06-01', dataInstalacao: '2023-08-20' }
-    ];
-    state.trocas = [
-      { id: 't1', puriId: 'p1', dataTroca: '2025-11-10', validadeMeses: 6, modeloRefil: 'C+3 Original', tecnico: 'Carlos', obs: 'Troca de rotina' },
-      { id: 't2', puriId: 'p2', dataTroca: '2025-06-01', validadeMeses: 9, modeloRefil: '2in1 Soft', tecnico: 'Carlos', obs: 'Instalação de refil novo' }
-    ];
+    gerarDadosIniciais50();
     salvar();
   }
   renderTudo();
