@@ -2,70 +2,707 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Refil em Dia</title>
+<title>Refil em Dia — Atualizado</title>
 <style>
 :root{--b:#0756a8;--p:#eaf5ff;--bg:#f4f8fc;--ink:#183047;--mut:#64798c;--line:#dce6ef}
-*{box-sizing:border-box}body{margin:0;font:15px system-ui,Arial;background:var(--bg);color:var(--ink)}header{background:linear-gradient(120deg,#06458b,#0879d4);color:#fff;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header h1{margin:0;font-size:25px}header p{margin:4px 0 0;color:#dceeff;font-size:13px}.wrap{max-width:1300px;margin:auto;padding:22px 4%;display:grid;grid-template-columns:190px 1fr;gap:20px}nav{display:flex;flex-direction:column;gap:7px}button{border:0;border-radius:9px;padding:10px 13px;cursor:pointer;font-weight:700;background:var(--b);color:#fff}button.alt{background:#fff;color:var(--b);border:1px solid #bdd6ec}button.red{background:#fff0ef;color:#a52222}nav button{text-align:left;background:transparent;color:#4b6378}nav button.active,nav button:hover{background:#e2f1ff;color:var(--b)}main{min-width:0}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}.head h2{margin:0;font-size:25px}.muted{color:var(--mut);font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:17px}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:16px;box-shadow:0 5px 20px #173b5c0b}.card small{color:var(--mut)}.card strong{display:block;font-size:28px;margin-top:7px}.panel h3{margin:0 0 13px}.row{display:flex;gap:9px;flex-wrap:wrap}.row input,.row select{flex:1;min-width:180px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-size:12px;font-weight:700;color:#526a80;margin-bottom:5px}.field input,.field select,.field textarea,input,select,textarea{width:100%;padding:10px;border:1px solid #cddbe8;border-radius:8px;background:#fff;color:var(--ink)}.field textarea{min-height:70px}table{border-collapse:collapse;width:100%;min-width:650px}th,td{text-align:left;padding:11px;border-bottom:1px solid #e8eef4;font-size:13px;vertical-align:middle}th{background:#f7fafd;color:#5c7185;font-size:11px;text-transform:uppercase}.scroll{overflow:auto;border:1px solid var(--line);border-radius:9px}.badge{display:inline-block;border-radius:30px;padding:4px 8px;font-size:11px;font-weight:800}.ok{background:#e5f7ec;color:#137143}.soon{background:#fff3d9;color:#8a5600}.late{background:#ffebe9;color:#b42318}.neutral{background:#edf2f7;color:#536779}.actions{display:flex;gap:5px;flex-wrap:wrap}.actions button{font-size:11px;padding:6px 8px}.notice{background:#eff7ff;border-radius:9px;padding:12px;margin-bottom:14px;color:#315a7c;font-size:13px}.empty{text-align:center;padding:25px;color:var(--mut)}.hidden{display:none!important}.modalbg{position:fixed;inset:0;background:#102b4380;display:grid;place-items:center;padding:15px;z-index:5}.modal{background:#fff;width:min(720px,100%);max-height:90vh;overflow:auto;padding:22px;border-radius:16px}.modalhead{display:flex;justify-content:space-between;align-items:center;margin-bottom:15px}.modalhead h3{margin:0}.modalactions{display:flex;justify-content:flex-end;gap:8px;margin-top:16px}.footer{text-align:center;padding:15px;color:#8292a2;font-size:11px}@media(max-width:850px){.wrap{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}nav{display:grid;grid-template-columns:repeat(3,1fr)}nav button{text-align:center;padding:9px 4px;font-size:12px}}@media(max-width:500px){.wrap{padding:13px 10px}.cards{gap:8px}.card{padding:12px}.card strong{font-size:23px}.formgrid{grid-template-columns:1fr}.head h2{font-size:21px}}
-</style></head>
+*{box-sizing:border-box}body{margin:0;font:15px system-ui,Arial;background:var(--bg);color:var(--ink)}header{background:linear-gradient(120deg,#06458b,#0879d4);color:#fff;padding:20px 5%;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}header h1{margin:0;font-size:25px}header p{margin:4px 0 0;color:#dceeff;font-size:13px}.wrap{max-width:1300px;margin:auto;padding:22px 4%;display:grid;grid-template-columns:190px 1fr;gap:20px}nav{display:flex;flex-direction:column;gap:7px}button{border:0;border-radius:9px;padding:10px 13px;cursor:pointer;font-weight:700;background:var(--b);color:#fff}button.alt{background:#fff;color:var(--b);border:1px solid #bdd6ec}button.red{background:#fff0ef;color:#a52222}nav button{text-align:left;background:transparent;color:#4b6378}nav button.active,nav button:hover{background:#e2f1ff;color:var(--b)}main{min-width:0}.head{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:16px}.head h2{margin:0;font-size:25px}.muted{color:var(--mut);font-size:13px}.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:17px}.card,.panel{background:#fff;border:1px solid var(--line);border-radius:14px;padding:17px;margin-bottom:16px;box-shadow:0 5px 20px #173b5c0b}.card small{color:var(--mut)}.card strong{display:block;font-size:28px;margin-top:7px}.panel h3{margin:0 0 13px}.row{display:flex;gap:9px;flex-wrap:wrap}.row input,.row select{flex:1;min-width:180px}.formgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field label{display:block;font-size:12px;font-weight:700;color:#526a80;margin-bottom:5px}.field input,.field select,.field textarea,input,select,textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:10px 11px;font:inherit}.field textarea{min-height:78px;resize:vertical}table{width:100%;border-collapse:collapse;margin-top:12px}th,td{padding:10px 8px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}th{color:var(--mut);font-size:12px}.badg{display:inline-block;padding:3px 9px;border-radius:99px;font-size:11px;font-weight:700}.ok{background:#e7f8ee;color:#187a3e}.warn{background:#fff6e5;color:#a36200}.crit{background:#ffebe8;color:#b3261e}.space{height:12px}.hidden{display:none!important}@media(max-width:900px){.wrap{grid-template-columns:1fr}.cards{grid-template-columns:repeat(2,1fr)}.formgrid{grid-template-columns:1fr}}
+</style>
+</head>
 <body>
-<header><div><h1>💧 Refil em Dia</h1><p>Gestão de filtros, refis e assistência técnica</p></div><div class="row"><button class="alt" id="backup">⇩ Backup JSON</button><button class="alt" id="addTop">＋ Novo cliente</button></div></header>
-<div class="wrap"><nav>
-<button class="active" data-page="home">▦ Visão geral</button><button data-page="clients">♙ Clientes</button><button data-page="equipment">▣ Equipamentos e trocas</button><button data-page="services">✓ Histórico de serviços</button><button data-page="agenda">▦ Agenda</button><button data-page="reports">▤ Relatórios</button>
-</nav><main>
-<section id="page-home"><div class="head"><div><h2>Visão geral</h2><p class="muted">Acompanhe clientes, trocas previstas e serviços.</p></div><button id="addServiceHome">＋ Registrar serviço</button></div>
-<div class="cards"><div class="card"><small>👥 Clientes</small><strong id="nClients">0</strong></div><div class="card"><small>🧰 Equipamentos</small><strong id="nEquip">0</strong></div><div class="card"><small>⏰ Trocas próximas</small><strong id="nSoon">0</strong></div><div class="card"><small>⚠️ Trocas atrasadas</small><strong id="nLate">0</strong></div></div>
-<div class="panel"><h3>Trocas que precisam de atenção</h3><div id="attention"></div></div><div class="panel"><h3>Resumo deste mês</h3><p id="monthSummary">Nenhum serviço registrado.</p><div id="recent"></div></div></section>
-<section id="page-clients" class="hidden"><div class="head"><div><h2>Clientes</h2><p class="muted">Cadastro e contato por WhatsApp.</p></div><button id="addClient">＋ Novo cliente</button></div><div class="panel"><div class="row"><input id="clientSearch" placeholder="Buscar nome, telefone ou cidade"></div><div id="clientTable"></div></div></section>
-<section id="page-equipment" class="hidden"><div class="head"><div><h2>Equipamentos e trocas</h2><p class="muted">Controle de datas e refis.</p></div><button id="addEquipment">＋ Novo equipamento</button></div><div class="notice">Use o intervalo indicado pelo fabricante e considere capacidade, volume de uso e qualidade da água. A data é uma previsão de acompanhamento.</div><div class="panel"><div class="row"><input id="equipSearch" placeholder="Buscar cliente, equipamento ou refil"><select id="equipFilter"><option value="">Todos os status</option><option value="late">Atrasados</option><option value="soon">Próximos (30 dias)</option><option value="ok">Em dia</option><option value="neutral">Sem data</option></select></div><div id="equipTable"></div></div></section>
-<section id="page-services" class="hidden"><div class="head"><div><h2>Histórico de serviços</h2><p class="muted">Trocas, manutenções, valores e técnico.</p></div><button id="addService">＋ Registrar serviço</button></div><div class="panel"><input id="serviceSearch" placeholder="Buscar cliente, serviço ou técnico"><div id="serviceTable"></div></div></section>
-<section id="page-agenda" class="hidden"><div class="head"><div><h2>Agenda</h2><p class="muted">Organize visitas e manutenções.</p></div><button id="addAppointment">＋ Agendar atendimento</button></div><div class="panel"><select id="agendaFilter"><option value="">Todos os status</option><option>Agendado</option><option>Confirmado</option><option>Concluído</option><option>Cancelado</option></select><div id="agendaTable"></div></div></section>
-<section id="page-reports" class="hidden"><div class="head"><div><h2>Relatórios</h2><p class="muted">Indicadores calculados com os registros locais.</p></div><button id="csv">⇩ Exportar serviços CSV</button></div><div class="cards"><div class="card"><small>Serviços registrados</small><strong id="rServices">0</strong></div><div class="card"><small>Faturamento registrado</small><strong id="rRevenue">R$ 0</strong></div><div class="card"><small>Clientes recorrentes</small><strong id="rRepeat">0</strong></div><div class="card"><small>Agendamentos pendentes</small><strong id="rPending">0</strong></div></div><div class="panel"><h3>Importante</h3><p class="muted">Esta versão salva os dados somente neste navegador. Para sincronizar celular e computador, usar login, permissões e banco online, será necessário conectar um serviço como Supabase. Exporte backups regularmente.</p><button class="alt" id="backup2">Baixar backup JSON</button></div></section>
-</main></div><div class="footer">Refil em Dia • Protótipo HTML • Os dados ficam neste navegador</div><div id="modalRoot"></div>
+<header>
+  <div>
+    <h1>Refil em Dia</h1>
+    <p>Controle de troca de elementos filtrantes de purificadores de água</p>
+  </div>
+  <div>
+    <button class="alt" onclick="exportarDados()">Exportar dados</button>
+    <button class="alt" onclick="importarDados()">Importar dados</button>
+    <input type="file" id="importInput" class="hidden" accept=".json" onchange="processarImportacao(event)">
+  </div>
+</header>
+
+<div class="wrap">
+  <nav>
+    <button id="tab-dash" class="active" onclick="mudarAba('dash')">Painel principal</button>
+    <button id="tab-clientes" onclick="mudarAba('clientes')">Clientes</button>
+    <button id="tab-purificadores" onclick="mudarAba('purificadores')">Purificadores</button>
+
+    <button id="tab-trocas" onclick="mudarAba('trocas')">Histórico de Trocas</button>
+  </nav>
+
+  <main>
+    <section id="sec-dash">
+      <div class="head">
+        <div>
+          <h2>Painel Principal</h2>
+          <div class="muted">Acompanhe as próximas trocas e mantenha seus clientes em dia</div>
+        </div>
+        <button onclick="mudarAba('trocas'); abrirModalTroca();">+ Registrar Troca</button>
+      </div>
+
+      <div class="cards">
+        <div class="card"><small>Total de Purificadores</small><strong id="kpiTotal">0</strong></div>
+        <div class="card"><small>Em dia</small><strong id="kpiOk" style="color:#187a3e">0</strong></div>
+        <div class="card"><small>Vencendo em 30 dias</small><strong id="kpiWarn" style="color:#a36200">0</strong></div>
+        <div class="card"><small>Vencidos / URGENTE</small><strong id="kpiCrit" style="color:#b3261e">0</strong></div>
+      </div>
+
+      <div class="panel">
+        <h3>Próximas Trocas Previstas</h3>
+        <div class="row">
+          <input type="text" id="buscaDash" placeholder="Buscar por cliente, purificador ou local..." oninput="renderDash()">
+          <select id="filtroStatusDash" onchange="renderDash()">
+            <option value="todos">Todos os status</option>
+            <option value="critico">Somente vencidos</option>
+            <option value="atencao">Vencendo em até 30 dias</option>
+            <option value="ok">Em dia</option>
+          </select>
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente / Local</th>
+              <th>Purificador / Modelo</th>
+              <th>Refil Atual</th>
+              <th>Última Troca</th>
+              <th>Próxima Troca</th>
+              <th>Status</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tbDash"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sec-clientes" class="hidden">
+      <div class="head">
+        <div>
+          <h2>Clientes</h2>
+          <div class="muted">Cadastre e gerencie clientes residenciais e comerciais</div>
+        </div>
+        <button onclick="abrirModalCliente()">+ Novo Cliente</button>
+      </div>
+
+      <div class="panel">
+        <div class="row">
+          <input type="text" id="buscaCliente" placeholder="Buscar cliente por nome, telefone ou e-mail..." oninput="renderClientes()">
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Nome / Razão</th>
+              <th>Tipo</th>
+              <th>Contato</th>
+              <th>Cidade / Bairro</th>
+              <th>Purificadores</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tbClientes"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sec-purificadores" class="hidden">
+      <div class="head">
+        <div>
+          <h2>Purificadores Cadastrados</h2>
+          <div class="muted">Equipamentos acompanhados pelo sistema</div>
+        </div>
+        <button onclick="abrirModalPurificador()">+ Novo Purificador</button>
+      </div>
+
+      <div class="panel">
+        <div class="row">
+          <input type="text" id="buscaPuri" placeholder="Buscar por marca, modelo, cliente ou local..." oninput="renderPurificadores()">
+        </div>
+        <table>
+          <thead>
+            <tr>
+              <th>Cliente</th>
+              <th>Local / Ponto</th>
+              <th>Equipamento / Marca</th>
+              <th>Modelo Refil</th>
+              <th>Validade Refil</th>
+              <th>Ações</th>
+            </tr>
+          </thead>
+          <tbody id="tbPurificadores"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="sec-trocas" class="hidden">
+      <div class="head">
+        <div>
+          <h2>Histórico de Trocas</h2>
+          <div class="muted">Registro de todas as manutenções e substituições já feitas</div>
+        </div>
+        <button onclick="abrirModalTroca()">+ Registrar Troca</button>
+      </div>
+
+      <div class="panel">
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Cliente</th>
+              <th>Purificador</th>
+              <th>Refil Instalado</th>
+              <th>Técnico / Resp.</th>
+              <th>Próxima Data</th>
+              <th>Observações</th>
+            </tr>
+          </thead>
+          <tbody id="tbTrocas"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+</div>
+
+<!-- MODAIS -->
+<div id="modalCliente" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;padding:15px;z-index:99">
+  <div style="background:#fff;padding:22px;border-radius:14px;max-width:550px;width:100%;max-height:90vh;overflow:auto">
+    <h3 id="mClienteTitulo">Novo Cliente</h3>
+    <input type="hidden" id="cId">
+    <div class="formgrid">
+      <div class="field" style="grid-column:span 2"><label>Nome do Cliente *</label><input id="cNome"></div>
+      <div class="field"><label>Tipo</label><select id="cTipo"><option value="Residencial">Residencial</option><option value="Comercial">Comercial</option></select></div>
+      <div class="field"><label>Telefone / WhatsApp *</label><input id="cTel" placeholder="(00) 00000-0000"></div>
+      <div class="field" style="grid-column:span 2"><label>E-mail</label><input id="cEmail"></div>
+      <div class="field"><label>Cidade</label><input id="cCidade"></div>
+      <div class="field"><label>Bairro</label><input id="cBairro"></div>
+      <div class="field" style="grid-column:span 2"><label>Observações</label><textarea id="cObs"></textarea></div>
+    </div>
+    <div class="space"></div>
+    <div class="row" style="justify-content:flex-end">
+      <button class="alt" onclick="fecharModal('modalCliente')">Cancelar</button>
+      <button onclick="salvarCliente()">Salvar Cliente</button>
+    </div>
+  </div>
+</div>
+
+<div id="modalPurificador" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;padding:15px;z-index:99">
+  <div style="background:#fff;padding:22px;border-radius:14px;max-width:600px;width:100%;max-height:90vh;overflow:auto">
+    <h3 id="mPuriTitulo">Novo Purificador</h3>
+    <input type="hidden" id="pId">
+    <div class="formgrid">
+      <div class="field" style="grid-column:span 2"><label>Cliente Proprietário *</label><select id="pClienteId"></select></div>
+      <div class="field"><label>Local do Equipamento (ex: Cozinha, Recepção) *</label><input id="pLocal"></div>
+      <div class="field"><label>Marca / Fabricante *</label><input id="pMarca" placeholder="Ex: IBBL, Soft Everest, Consul"></div>
+      <div class="field"><label>Modelo do Purificador</label><input id="pModelo" placeholder="Ex: FR600, Fit, CPB36"></div>
+      <div class="field"><label>Modelo/Código do Refil *</label><input id="pModeloRefil" placeholder="Ex: C+3, C+5, CZ+7"></div>
+      <div class="field"><label>Validade padrão do refil (meses)</label><input type="number" id="pValidadeMeses" value="6" min="1" max="36"></div>
+      <div class="field"><label>Data da última troca do refil *</label><input type="date" id="pDataUltimaTroca"></div>
+      <div class="field"><label>Data de instalação do aparelho</label><input type="date" id="pDataInstalacao"></div>
+    </div>
+    <div class="space"></div>
+    <div class="row" style="justify-content:flex-end">
+      <button class="alt" onclick="fecharModal('modalPurificador')">Cancelar</button>
+      <button onclick="salvarPurificador()">Salvar Purificador</button>
+    </div>
+  </div>
+</div>
+
+<div id="modalTroca" class="hidden" style="position:fixed;inset:0;background:rgba(0,0,0,0.45);display:flex;align-items:center;justify-content:center;padding:15px;z-index:99">
+  <div style="background:#fff;padding:22px;border-radius:14px;max-width:550px;width:100%;max-height:90vh;overflow:auto">
+    <h3>Registrar Troca de Refil</h3>
+    <div class="formgrid">
+      <div class="field" style="grid-column:span 2"><label>Purificador *</label><select id="tPuriId" onchange="aoSelecionarPurificadorTroca()"></select></div>
+      <div class="field"><label>Data da Troca *</label><input type="date" id="tDataTroca"></div>
+      <div class="field"><label>Validade desse refil (meses)</label><input type="number" id="tValidadeMeses" value="6" min="1" max="36"></div>
+      <div class="field"><label>Modelo do Refil Instalado</label><input id="tModeloRefil"></div>
+      <div class="field"><label>Técnico / Responsável</label><input id="tTecnico" placeholder="Quem realizou a troca"></div>
+      <div class="field" style="grid-column:span 2"><label>Observações da Troca</label><textarea id="tObs" placeholder="Ex: Limpeza interna realizada, troca preventiva..."></textarea></div>
+    </div>
+    <div class="space"></div>
+    <div class="row" style="justify-content:flex-end">
+      <button class="alt" onclick="fecharModal('modalTroca')">Cancelar</button>
+      <button onclick="salvarTroca()">Confirmar Troca</button>
+    </div>
+  </div>
+</div>
+
 <script>
-(()=>{'use strict';
-const KEY='refilEmDia_data_v1';let db={clients:[],equipments:[],services:[],appointments:[]};try{db={...db,...JSON.parse(localStorage.getItem(KEY)||'{}')}}catch(e){}
-const save=()=>{try{localStorage.setItem(KEY,JSON.stringify(db))}catch(e){alert('Falha ao salvar. Exporte um backup.')}};
-const uid=()=>Date.now().toString(36)+Math.random().toString(36).slice(2,7),$=id=>document.getElementById(id),esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])),today=()=>{let d=new Date();return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')},fmt=d=>d?d.split('-').reverse().join('/'):'—',money=n=>Number(n||0).toLocaleString('pt-BR',{style:'currency',currency:'BRL'}),client=id=>db.clients.find(c=>c.id===id),equip=id=>db.equipments.find(e=>e.id===id),cname=id=>client(id)?.name||'Cliente removido';
-function next(e){if(!e?.last)return '';let d=new Date(e.last+'T12:00:00'),n=Number(e.interval||0);if(e.unit==='days')d.setDate(d.getDate()+n);else{let day=d.getDate();d.setDate(1);d.setMonth(d.getMonth()+n);d.setDate(Math.min(day,new Date(d.getFullYear(),d.getMonth()+1,0).getDate()))}return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0')}
-function stat(e){let n=next(e);if(!n)return{key:'neutral',label:'Sem data'};let diff=Math.round((new Date(n+'T12:00:00')-new Date(today()+'T12:00:00'))/86400000);return diff<0?{key:'late',label:'Atrasado'}:diff<=30?{key:'soon',label:'Troca próxima'}:{key:'ok',label:'Em dia'}}
-const badge=s=>`<span class="badge ${s.key}">${esc(s.label)}</span>`;
-function tbl(head,rows,empty){return rows.length?`<div class="scroll"><table><thead><tr>${head.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.join('')}</tbody></table></div>`:`<div class="empty">${empty||'Nenhum registro cadastrado.'}</div>`}
-function render(){renderHome();renderClients();renderEquip();renderServices();renderAgenda();renderReports()}
-function renderHome(){ $('nClients').textContent=db.clients.length;$('nEquip').textContent=db.equipments.length;$('nSoon').textContent=db.equipments.filter(e=>stat(e).key==='soon').length;$('nLate').textContent=db.equipments.filter(e=>stat(e).key==='late').length;
-let attention=db.equipments.filter(e=>['late','soon'].includes(stat(e).key)).sort((a,b)=>next(a).localeCompare(next(b))).slice(0,8);
-$('attention').innerHTML=attention.length?attention.map(e=>`<p>${badge(stat(e))} <b>${esc(cname(e.clientId))}</b> — ${esc(e.name)} · próxima troca ${fmt(next(e))}</p>`).join(''):'<div class="empty">Nenhuma troca próxima ou atrasada.</div>';
-let now=today().slice(0,7),ms=db.services.filter(s=>s.date?.startsWith(now)),total=ms.reduce((a,s)=>a+Number(s.price||0),0);$('monthSummary').textContent=`${ms.length} serviço(s) neste mês · Total registrado: ${money(total)} · Média: ${money(ms.length?total/ms.length:0)}`;
-$('recent').innerHTML=tbl(['Data','Cliente','Serviço','Valor'],[...db.services].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5).map(s=>`<tr><td>${fmt(s.date)}</td><td>${esc(cname(s.clientId))}</td><td>${esc(s.type)}</td><td>${money(s.price)}</td></tr>`),'Nenhum serviço registrado ainda.')}
-function renderClients(){let q=($('clientSearch')?.value||'').toLowerCase();$('clientTable').innerHTML=tbl(['Cliente','Telefone','Cidade / bairro','Status','Ações'],db.clients.filter(c=>[c.name,c.phone,c.city,c.neighborhood].some(v=>String(v||'').toLowerCase().includes(q))).sort((a,b)=>a.name.localeCompare(b.name)).map(c=>`<tr><td><b>${esc(c.name)}</b><br><small>${esc(c.email||'')}</small></td><td>${esc(c.phone)}</td><td>${esc([c.city,c.neighborhood].filter(Boolean).join(' / '))}</td><td>${badge({key:c.status==='Inativo'?'neutral':'ok',label:c.status||'Ativo'})}</td><td><div class="actions"><button class="alt" data-act="editC" data-id="${c.id}">Editar</button><button class="alt" data-act="waC" data-id="${c.id}">WhatsApp</button><button class="red" data-act="delC" data-id="${c.id}">Excluir</button></div></td></tr>`),'Nenhum cliente cadastrado.')}
-function renderEquip(){let q=($('equipSearch')?.value||'').toLowerCase(),f=$('equipFilter')?.value||'';$('equipTable').innerHTML=tbl(['Equipamento','Cliente','Refil / filtro','Última troca','Próxima troca','Status','Ações'],db.equipments.filter(e=>(!f||stat(e).key===f)&&[e.name,e.brand,e.filter,cname(e.clientId)].some(v=>String(v||'').toLowerCase().includes(q))).sort((a,b)=>(next(a)||'9999').localeCompare(next(b)||'9999')).map(e=>`<tr><td><b>${esc(e.name)}</b><br><small>${esc([e.brand,e.model].filter(Boolean).join(' '))}</small></td><td>${esc(cname(e.clientId))}</td><td>${esc(e.filter||'—')}</td><td>${fmt(e.last)}</td><td>${fmt(next(e))}</td><td>${badge(stat(e))}</td><td><div class="actions"><button class="alt" data-act="editE" data-id="${e.id}">Editar</button><button data-act="change" data-id="${e.id}">Registrar troca</button></div></td></tr>`),'Nenhum equipamento cadastrado.')}
-function renderServices(){let q=($('serviceSearch')?.value||'').toLowerCase();$('serviceTable').innerHTML=tbl(['Data','Cliente','Serviço / refil','Técnico','Valor','Ações'],[...db.services].filter(s=>[cname(s.clientId),s.type,s.filter,s.tech].some(v=>String(v||'').toLowerCase().includes(q))).sort((a,b)=>b.date.localeCompare(a.date)).map(s=>`<tr><td>${fmt(s.date)}</td><td>${esc(cname(s.clientId))}</td><td>${esc(s.type)}<br><small>${esc(s.filter||'')}</small></td><td>${esc(s.tech||'—')}</td><td>${money(s.price)}</td><td><div class="actions"><button class="alt" data-act="editS" data-id="${s.id}">Editar</button><button class="red" data-act="delS" data-id="${s.id}">Excluir</button></div></td></tr>`),'Nenhum serviço registrado.')}
-function renderAgenda(){let f=$('agendaFilter')?.value||'';$('agendaTable').innerHTML=tbl(['Data / hora','Cliente','Atendimento / endereço','Status','Ações'],[...db.appointments].filter(a=>!f||a.status===f).sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time)).map(a=>`<tr><td>${fmt(a.date)}<br>${esc(a.time||'')}</td><td>${esc(cname(a.clientId))}</td><td>${esc(a.type)}<br><small>${esc(a.address||'')}</small></td><td>${badge({key:a.status==='Concluído'?'ok':a.status==='Cancelado'?'neutral':'soon',label:a.status})}</td><td><div class="actions"><button class="alt" data-act="editA" data-id="${a.id}">Editar</button><button class="alt" data-act="waA" data-id="${a.id}">WhatsApp</button><button class="red" data-act="delA" data-id="${a.id}">Excluir</button></div></td></tr>`),'Nenhum agendamento cadastrado.')}
-function renderReports(){let sum=db.services.reduce((a,s)=>a+Number(s.price||0),0),counts={};db.services.forEach(s=>counts[s.clientId]=(counts[s.clientId]||0)+1);$('rServices').textContent=db.services.length;$('rRevenue').textContent=money(sum);$('rRepeat').textContent=Object.values(counts).filter(n=>n>1).length;$('rPending').textContent=db.appointments.filter(a=>['Agendado','Confirmado'].includes(a.status)).length}
-function go(p){document.querySelectorAll('main section').forEach(s=>s.classList.add('hidden'));$('page-'+p).classList.remove('hidden');document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===p));}
-document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>go(b.dataset.page));
-function modal(title,body,fn){let root=$('modalRoot');root.innerHTML=`<div class="modalbg" id="mb"><div class="modal"><div class="modalhead"><h3>${title}</h3><button class="alt" type="button" id="closeM">✕</button></div><form id="mf">${body}<div class="modalactions"><button class="alt" type="button" id="cancelM">Cancelar</button><button type="submit">Salvar</button></div></form></div></div>`;let close=()=>root.innerHTML='';$('closeM').onclick=$('cancelM').onclick=close;$('mb').onclick=e=>{if(e.target.id==='mb')close()};$('mf').onsubmit=e=>{e.preventDefault();let o=Object.fromEntries(new FormData(e.target));if(fn(o)===false)return;save();close();render()}}
-const F=(label,name,val='',type='text',req='')=>`<div class="field"><label>${label}</label><input name="${name}" type="${type}" value="${esc(val)}" ${req}></div>`,A=(label,name,val='')=>`<div class="field" style="grid-column:1/-1"><label>${label}</label><textarea name="${name}">${esc(val)}</textarea></div>`,S=(label,name,opts,val)=>`<div class="field"><label>${label}</label><select name="${name}" required>${opts.map(o=>`<option value="${esc(o[0])}" ${o[0]===val?'selected':''}>${esc(o[1])}</option>`).join('')}</select></div>`;
-function clientForm(c={}){modal(c.id?'Editar cliente':'Novo cliente',`<div class="formgrid">${F('Nome completo *','name',c.name||'','text','required')}${F('CPF/CNPJ (opcional)','doc',c.doc||'')}${F('Telefone / WhatsApp *','phone',c.phone||'','tel','required')}${F('E-mail','email',c.email||'','email')}${F('Endereço','address',c.address||'')}${F('Bairro','neighborhood',c.neighborhood||'')}${F('Cidade','city',c.city||'Belo Horizonte')}${S('Status','status',[['Ativo','Ativo'],['Inativo','Inativo']],c.status||'Ativo')}${F('Primeiro atendimento','first',c.first||today(),'date')}${A('Observações','notes',c.notes||'')}</div>`,o=>{if(!o.name.trim()||!o.phone.trim())return false;let v={...c,...o,id:c.id||uid()};let i=db.clients.findIndex(x=>x.id===v.id);i<0?db.clients.push(v):db.clients[i]=v})}
-const clientOpts=selected=>db.clients.filter(c=>c.status!=='Inativo'||c.id===selected).map(c=>[c.id,c.name]);
-const types=['Bebedouro de pressão','Bebedouro de galão','Purificador','Filtro residencial','Filtro industrial','Máquina de gelo','Outro'].map(x=>[x,x]);
-function equipmentForm(e={}){if(!db.clients.length){alert('Cadastre primeiro um cliente.');go('clients');return}modal(e.id?'Editar equipamento':'Novo equipamento',`<div class="formgrid">${S('Cliente *','clientId',clientOpts(e.clientId),e.clientId||db.clients[0].id)}${S('Tipo de equipamento *','name',types,e.name||'Purificador')}${F('Marca','brand',e.brand||'')}${F('Modelo / número de série','model',e.model||'')}${F('Tipo / modelo do refil','filter',e.filter||'')}${F('Data da última troca','last',e.last||'','date')}${F('Intervalo recomendado *','interval',e.interval??6,'number','min="1" required')}${S('Unidade do intervalo','unit',[['months','Meses'],['days','Dias']],e.unit||'months')}${F('Capacidade indicada pelo fabricante','capacity',e.capacity||'')}${A('Observações','notes',e.notes||'')}</div><p class="notice">A próxima troca será calculada com base na última troca e no intervalo informado.</p>`,o=>{if(!o.clientId||!o.name)return false;let v={...e,...o,id:e.id||uid(),interval:Number(o.interval||0)};let i=db.equipments.findIndex(x=>x.id===v.id);i<0?db.equipments.push(v):db.equipments[i]=v})}
-function serviceForm(s={},equipId=''){if(!db.clients.length){alert('Cadastre primeiro um cliente.');go('clients');return}let cid=s.clientId||equip(equipId)?.clientId||db.clients[0].id;let opts=db.equipments.filter(e=>e.clientId===cid).map(e=>[e.id,e.name]);modal(s.id?'Editar serviço':'Registrar serviço',`<div class="formgrid">${S('Cliente *','clientId',clientOpts(cid),cid)}${F('Data do atendimento *','date',s.date||today(),'date','required')}${S('Equipamento','equipmentId',[['','Sem equipamento vinculado'],...opts],s.equipmentId||equipId||'')}${S('Tipo de serviço','type',[['Troca de refil','Troca de refil'],['Manutenção','Manutenção'],['Higienização','Higienização'],['Instalação','Instalação'],['Visita técnica','Visita técnica'],['Outro','Outro']],s.type||'Troca de refil')}${F('Refil / peça utilizada','filter',s.filter||equip(s.equipmentId||equipId)?.filter||'')}${F('Valor cobrado (R$)','price',s.price??'','number','min="0" step="0.01"')}${F('Técnico responsável','tech',s.tech||'')}${A('Observações','notes',s.notes||'')}</div>`,o=>{if(!o.clientId||!o.date)return false;let v={...s,...o,id:s.id||uid(),price:Number(o.price||0)};let i=db.services.findIndex(x=>x.id===v.id);i<0?db.services.push(v):db.services[i]=v;if(v.equipmentId&&v.type==='Troca de refil'){let e=equip(v.equipmentId);if(e){e.last=v.date;if(v.filter)e.filter=v.filter}}})}
-function appointmentForm(a={}){if(!db.clients.length){alert('Cadastre primeiro um cliente.');go('clients');return}modal(a.id?'Editar agendamento':'Agendar atendimento',`<div class="formgrid">${S('Cliente *','clientId',clientOpts(a.clientId),a.clientId||db.clients[0].id)}${F('Data *','date',a.date||today(),'date','required')}${F('Horário','time',a.time||'','time')}${S('Tipo','type',[['Troca de refil','Troca de refil'],['Manutenção','Manutenção'],['Instalação','Instalação'],['Visita técnica','Visita técnica'],['Orçamento','Orçamento'],['Outro','Outro']],a.type||'Troca de refil')}${S('Status','status',[['Agendado','Agendado'],['Confirmado','Confirmado'],['Concluído','Concluído'],['Cancelado','Cancelado']],a.status||'Agendado')}${F('Endereço','address',a.address||client(a.clientId)?.address||'')}${A('Observações','notes',a.notes||'')}</div>`,o=>{if(!o.clientId||!o.date)return false;let v={...a,...o,id:a.id||uid()};let i=db.appointments.findIndex(x=>x.id===v.id);i<0?db.appointments.push(v):db.appointments[i]=v})}
-function wa(phone,msg){let n=String(phone||'').replace(/\D/g,'');if(!n){alert('Telefone não cadastrado.');return}if(!n.startsWith('55'))n='55'+n;window.open('https://wa.me/'+n+'?text='+encodeURIComponent(msg),'_blank','noopener')}
-$('addClient').onclick=$('addTop').onclick=()=>clientForm();$('addEquipment').onclick=()=>equipmentForm();$('addService').onclick=$('addServiceHome').onclick=()=>serviceForm();$('addAppointment').onclick=()=>appointmentForm();
-$('clientSearch').oninput=renderClients;$('equipSearch').oninput=renderEquip;$('equipFilter').onchange=renderEquip;$('serviceSearch').oninput=renderServices;$('agendaFilter').onchange=renderAgenda;
-document.addEventListener('click',e=>{let b=e.target.closest('[data-act]');if(!b)return;let {act,id}=b.dataset;
-if(act==='editC')clientForm(client(id));if(act==='delC'&&confirm('Excluir este cliente?')){db.clients=db.clients.filter(c=>c.id!==id);save();render()}
-if(act==='waC'){let c=client(id);wa(c.phone,`Olá, ${c.name}! Aqui é da Refil em Dia. Gostaria de agendar uma avaliação ou troca do refil para manter seu filtro em dia?`)}
-if(act==='editE')equipmentForm(equip(id));if(act==='change'){let e=equip(id);serviceForm({clientId:e.clientId,equipmentId:e.id,date:today(),type:'Troca de refil',filter:e.filter||''},e.id)}
-if(act==='editS')serviceForm(db.services.find(s=>s.id===id));if(act==='delS'&&confirm('Excluir este serviço?')){db.services=db.services.filter(s=>s.id!==id);save();render()}
-if(act==='editA')appointmentForm(db.appointments.find(a=>a.id===id));if(act==='delA'&&confirm('Excluir este agendamento?')){db.appointments=db.appointments.filter(a=>a.id!==id);save();render()}
-if(act==='waA'){let a=db.appointments.find(a=>a.id===id),c=client(a.clientId);wa(c?.phone,`Olá, ${c?.name||''}! Aqui é da Refil em Dia. Podemos confirmar seu atendimento de ${a.type}, dia ${fmt(a.date)}${a.time?' às '+a.time:''}?`)}
-});
-function download(name,content,type){let blob=new Blob(['\ufeff',content],{type}),u=URL.createObjectURL(blob),a=document.createElement('a');a.href=u;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(u),1000)}
-function backup(){download('refil-em-dia-backup.json',JSON.stringify(db,null,2),'application/json')}
-$('backup').onclick=$('backup2').onclick=backup;
-$('csv').onclick=()=>{let rows=[['Data','Cliente','Equipamento','Serviço','Refil','Técnico','Valor'],...db.services.map(s=>[s.date,cname(s.clientId),equip(s.equipmentId)?.name||'',s.type,s.filter,s.tech,s.price])];download('refil-em-dia-servicos.csv',rows.map(r=>r.map(v=>'"'+String(v??'').replace(/"/g,'""')+'"').join(';')).join('\n'),'text/csv')};
-render();
-})();
-</script></body></html>
+let state = {
+  clientes: [],
+  purificadores: [],
+  trocas: []
+};
+
+function carregar() {
+  let s = localStorage.getItem('refil_em_dia_db');
+  if(s) {
+    try { state = JSON.parse(s); } catch(e){}
+  } else {
+    // Dados de exemplo
+    state.clientes = [
+      { id: 'c1', nome: 'Clínica Sorriso Leve', tipo: 'Comercial', tel: '(31) 98888-1111', email: 'contato@sorrisoleve.com', cidade: 'Belo Horizonte', bairro: 'Savassi', obs: 'Trocar refil fora do horário de atendimento' },
+      { id: 'c2', nome: 'Mariana Silva', tipo: 'Residencial', tel: '(31) 99777-2222', email: 'mari.silva@email.com', cidade: 'Contagem', bairro: 'Eldorado', obs: 'Ligar antes de ir' }
+    ];
+    state.purificadores = [
+      { id: 'p1', clienteId: 'c1', local: 'Recepção', marca: 'IBBL', modelo: 'FR600', modeloRefil: 'C+3 Original', validadeMeses: 6, dataUltimaTroca: '2025-11-10', dataInstalacao: '2024-01-15' },
+      { id: 'p2', clienteId: 'c2', local: 'Cozinha', marca: 'Soft Everest', modelo: 'Fit', modeloRefil: '2in1 Soft', validadeMeses: 9, dataUltimaTroca: '2025-06-01', dataInstalacao: '2023-08-20' }
+    ];
+    state.trocas = [
+      { id: 't1', puriId: 'p1', dataTroca: '2025-11-10', validadeMeses: 6, modeloRefil: 'C+3 Original', tecnico: 'Carlos', obs: 'Troca de rotina' },
+      { id: 't2', puriId: 'p2', dataTroca: '2025-06-01', validadeMeses: 9, modeloRefil: '2in1 Soft', tecnico: 'Carlos', obs: 'Instalação de refil novo' }
+    ];
+    salvar();
+  }
+  renderTudo();
+}
+
+function salvar() {
+  localStorage.setItem('refil_em_dia_db', JSON.stringify(state));
+}
+
+function renderTudo() {
+  renderDash();
+  renderClientes();
+  renderPurificadores();
+  renderTrocas();
+}
+
+function addDias(dataStr, meses) {
+  if(!dataStr) return new Date();
+  let d = new Date(dataStr + 'T00:00:00');
+  d.setMonth(d.getMonth() + parseInt(meses || 6));
+  return d;
+}
+
+function calcStatus(dataUltima, meses) {
+  if(!dataUltima) return { status: 'critico', texto: 'Sem Registro', dias: -999, prox: '-' };
+  let prox = addDias(dataUltima, meses);
+  let hoje = new Date();
+  hoje.setHours(0,0,0,0);
+  let diffMs = prox - hoje;
+  let dias = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
+
+  let proxFmt = prox.toLocaleDateString('pt-BR');
+
+  if(dias < 0) return { status: 'critico', texto: `Vencido há ${Math.abs(dias)} dias`, dias, prox: proxFmt };
+  if(dias <= 30) return { status: 'atencao', texto: `Vence em ${dias} dias`, dias, prox: proxFmt };
+  return { status: 'ok', texto: `Em dia (${dias} dias)`, dias, prox: proxFmt };
+}
+
+function renderDash() {
+  let tb = document.getElementById('tbDash');
+  tb.innerHTML = '';
+
+  let busca = document.getElementById('buscaDash').value.toLowerCase();
+  let filtro = document.getElementById('filtroStatusDash').value;
+
+  let total=0, ok=0, warn=0, crit=0;
+
+  let lista = state.purificadores.map(p => {
+    let cli = state.clientes.find(c => c.id === p.clienteId) || { nome: 'Cliente não encontrado' };
+    let st = calcStatus(p.dataUltimaTroca, p.validadeMeses);
+
+    if(st.status === 'ok') ok++;
+    else if(st.status === 'atencao') warn++;
+    else if(st.status === 'critico') crit++;
+    total++;
+
+    return { ...p, cliente: cli, st };
+  });
+
+  document.getElementById('kpiTotal').innerText = total;
+  document.getElementById('kpiOk').innerText = ok;
+  document.getElementById('kpiWarn').innerText = warn;
+  document.getElementById('kpiCrit').innerText = crit;
+
+  lista.sort((a,b) => a.st.dias - b.st.dias);
+
+  lista.forEach(item => {
+    let textBusca = `${item.cliente.nome} ${item.local} ${item.marca} ${item.modelo} ${item.modeloRefil}`.toLowerCase();
+    if(busca && !textBusca.includes(busca)) return;
+    if(filtro !== 'todos' && item.st.status !== filtro) return;
+
+    let badgClass = item.st.status === 'ok' ? 'ok' : (item.st.status === 'atencao' ? 'warn' : 'crit');
+    let dtUltima = item.dataUltimaTroca ? new Date(item.dataUltimaTroca+'T00:00:00').toLocaleDateString('pt-BR') : '-';
+
+    let msgZap = encodeURIComponent(`Olá ${item.cliente.nome}, tudo bem? Lembramos que a troca do refil/filtro do seu purificador (${item.marca} - ${item.local}) está prevista para ${item.st.prox}. Podemos agendar?`);
+    let linkZap = item.cliente.tel ? `https://wa.me/55${item.cliente.tel.replace(/\D/g,'')}?text=${msgZap}` : '#';
+
+    let tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${item.cliente.nome}</strong><br><small class="muted">${item.local}</small></td>
+      <td>${item.marca} ${item.modelo || ''}</td>
+      <td>${item.modeloRefil || 'Padrão'}</td>
+      <td>${dtUltima}</td>
+      <td><strong>${item.st.prox}</strong></td>
+      <td><span class="badg ${badgClass}">${item.st.texto}</span></td>
+      <td>
+        ${item.cliente.tel ? `<a href="${linkZap}" target="_blank" style="margin-right:8px;text-decoration:none">📱 WhatsApp</a>` : ''}
+        <button onclick="trocarDireto('${item.id}')" style="padding:4px 8px;font-size:12px">Trocar</button>
+      </td>
+    `;
+    tb.appendChild(tr);
+  });
+
+  if(!tb.children.length) {
+    tb.innerHTML = '<tr><td colspan="7" class="muted" style="text-align:center;padding:20px">Nenhum purificador encontrado.</td></tr>';
+  }
+}
+
+function renderClientes() {
+  let tb = document.getElementById('tbClientes');
+  tb.innerHTML = '';
+  let busca = document.getElementById('buscaCliente').value.toLowerCase();
+
+  state.clientes.forEach(c => {
+    let txt = `${c.nome} ${c.tel} ${c.email} ${c.cidade} ${c.bairro}`.toLowerCase();
+    if(busca && !txt.includes(busca)) return;
+
+    let qtdPuri = state.purificadores.filter(p => p.clienteId === c.id).length;
+
+    let tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${c.nome}</strong></td>
+      <td>${c.tipo || 'Residencial'}</td>
+      <td>${c.tel || '-'}<br><small class="muted">${c.email || ''}</small></td>
+      <td>${c.cidade || '-'}${c.bairro ? ' / ' + c.bairro : ''}</td>
+      <td><strong>${qtdPuri}</strong> equip.</td>
+      <td>
+        <button class="alt" onclick="editarCliente('${c.id}')" style="padding:4px 8px;font-size:12px">Editar</button>
+        <button class="red" onclick="excluirCliente('${c.id}')" style="padding:4px 8px;font-size:12px">Excluir</button>
+      </td>
+    `;
+    tb.appendChild(tr);
+  });
+}
+
+function renderPurificadores() {
+  let tb = document.getElementById('tbPurificadores');
+  tb.innerHTML = '';
+  let busca = document.getElementById('buscaPuri').value.toLowerCase();
+
+  state.purificadores.forEach(p => {
+    let cli = state.clientes.find(c => c.id === p.clienteId) || { nome: 'Cliente removido' };
+    let txt = `${cli.nome} ${p.local} ${p.marca} ${p.modelo} ${p.modeloRefil}`.toLowerCase();
+    if(busca && !txt.includes(busca)) return;
+
+    let tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${cli.nome}</strong></td>
+      <td>${p.local}</td>
+      <td>${p.marca} ${p.modelo ? ' - ' + p.modelo : ''}</td>
+      <td>${p.modeloRefil || '-'}</td>
+      <td>A cada ${p.validadeMeses || 6} meses</td>
+      <td>
+        <button class="alt" onclick="editarPurificador('${p.id}')" style="padding:4px 8px;font-size:12px">Editar</button>
+        <button class="red" onclick="excluirPurificador('${p.id}')" style="padding:4px 8px;font-size:12px">Excluir</button>
+      </td>
+    `;
+    tb.appendChild(tr);
+  });
+}
+
+function renderTrocas() {
+  let tb = document.getElementById('tbTrocas');
+  tb.innerHTML = '';
+
+  let lista = [...state.trocas].sort((a,b) => new Date(b.dataTroca) - new Date(a.dataTroca));
+
+  lista.forEach(t => {
+    let p = state.purificadores.find(item => item.id === t.puriId);
+    let cli = p ? state.clientes.find(c => c.id === p.clienteId) : null;
+
+    let dtTrocaFmt = t.dataTroca ? new Date(t.dataTroca+'T00:00:00').toLocaleDateString('pt-BR') : '-';
+    let proxFmt = t.dataTroca ? addDias(t.dataTroca, t.validadeMeses).toLocaleDateString('pt-BR') : '-';
+
+    let tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td><strong>${dtTrocaFmt}</strong></td>
+      <td>${cli ? cli.nome : 'Cliente N/D'}</td>
+      <td>${p ? p.marca + ' (' + p.local + ')' : 'Purificador N/D'}</td>
+      <td>${t.modeloRefil || '-'}</td>
+      <td>${t.tecnico || '-'}</td>
+      <td>${proxFmt}</td>
+      <td><small class="muted">${t.obs || '-'}</small></td>
+    `;
+    tb.appendChild(tr);
+  });
+}
+
+function mudarAba(aba) {
+  document.querySelectorAll('nav button').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + aba).classList.add('active');
+
+  document.querySelectorAll('main > section').forEach(s => s.classList.add('hidden'));
+  document.getElementById('sec-' + aba).classList.remove('hidden');
+}
+
+function abrirModal(id) { document.getElementById(id).classList.remove('hidden'); }
+function fecharModal(id) { document.getElementById(id).classList.add('hidden'); }
+
+function abrirModalCliente() {
+  document.getElementById('mClienteTitulo').innerText = 'Novo Cliente';
+  document.getElementById('cId').value = '';
+  document.getElementById('cNome').value = '';
+  document.getElementById('cTipo').value = 'Residencial';
+  document.getElementById('cTel').value = '';
+  document.getElementById('cEmail').value = '';
+  document.getElementById('cCidade').value = '';
+  document.getElementById('cBairro').value = '';
+  document.getElementById('cObs').value = '';
+  abrirModal('modalCliente');
+}
+
+function salvarCliente() {
+  let id = document.getElementById('cId').value;
+  let nome = document.getElementById('cNome').value.trim();
+  let tel = document.getElementById('cTel').value.trim();
+
+  if(!nome || !tel) return alert('Por favor, preencha Nome e Telefone!');
+
+  if(id) {
+    let c = state.clientes.find(x => x.id === id);
+    if(c) {
+      c.nome = nome;
+      c.tipo = document.getElementById('cTipo').value;
+      c.tel = tel;
+      c.email = document.getElementById('cEmail').value.trim();
+      c.cidade = document.getElementById('cCidade').value.trim();
+      c.bairro = document.getElementById('cBairro').value.trim();
+      c.obs = document.getElementById('cObs').value.trim();
+    }
+  } else {
+    state.clientes.push({
+      id: 'c_' + Date.now(),
+      nome,
+      tipo: document.getElementById('cTipo').value,
+      tel,
+      email: document.getElementById('cEmail').value.trim(),
+      cidade: document.getElementById('cCidade').value.trim(),
+      bairro: document.getElementById('cBairro').value.trim(),
+      obs: document.getElementById('cObs').value.trim()
+    });
+  }
+  salvar();
+  fecharModal('modalCliente');
+  renderTudo();
+}
+
+function editarCliente(id) {
+  let c = state.clientes.find(x => x.id === id);
+  if(!c) return;
+  document.getElementById('mClienteTitulo').innerText = 'Editar Cliente';
+  document.getElementById('cId').value = c.id;
+  document.getElementById('cNome').value = c.nome;
+  document.getElementById('cTipo').value = c.tipo || 'Residencial';
+  document.getElementById('cTel').value = c.tel || '';
+  document.getElementById('cEmail').value = c.email || '';
+  document.getElementById('cCidade').value = c.cidade || '';
+  document.getElementById('cBairro').value = c.bairro || '';
+  document.getElementById('cObs').value = c.obs || '';
+  abrirModal('modalCliente');
+}
+
+function excluirCliente(id) {
+  if(!confirm('Deseja realmente excluir este cliente e seus históricos?')) return;
+  state.clientes = state.clientes.filter(x => x.id !== id);
+  state.purificadores = state.purificadores.filter(x => x.clienteId !== id);
+  salvar();
+  renderTudo();
+}
+
+function carregarSelectClientes() {
+  let sel = document.getElementById('pClienteId');
+  sel.innerHTML = '<option value="">Selecione um cliente...</option>';
+  state.clientes.forEach(c => {
+    sel.innerHTML += `<option value="${c.id}">${c.nome}</option>`;
+  });
+}
+
+function abrirModalPurificador() {
+  carregarSelectClientes();
+  document.getElementById('mPuriTitulo').innerText = 'Novo Purificador';
+  document.getElementById('pId').value = '';
+  document.getElementById('pClienteId').value = '';
+  document.getElementById('pLocal').value = '';
+  document.getElementById('pMarca').value = '';
+  document.getElementById('pModelo').value = '';
+  document.getElementById('pModeloRefil').value = '';
+  document.getElementById('pValidadeMeses').value = 6;
+  document.getElementById('pDataUltimaTroca').value = new Date().toISOString().split('T')[0];
+  document.getElementById('pDataInstalacao').value = '';
+  abrirModal('modalPurificador');
+}
+
+function salvarPurificador() {
+  let id = document.getElementById('pId').value;
+  let clienteId = document.getElementById('pClienteId').value;
+  let local = document.getElementById('pLocal').value.trim();
+  let marca = document.getElementById('pMarca').value.trim();
+  let modeloRefil = document.getElementById('pModeloRefil').value.trim();
+  let validadeMeses = parseInt(document.getElementById('pValidadeMeses').value) || 6;
+  let dataUltimaTroca = document.getElementById('pDataUltimaTroca').value;
+
+  if(!clienteId || !local || !marca || !modeloRefil || !dataUltimaTroca) {
+    return alert('Preencha todos os campos obrigatórios (*)!');
+  }
+
+  if(id) {
+    let p = state.purificadores.find(x => x.id === id);
+    if(p) {
+      p.clienteId = clienteId;
+      p.local = local;
+      p.marca = marca;
+      p.modelo = document.getElementById('pModelo').value.trim();
+      p.modeloRefil = modeloRefil;
+      p.validadeMeses = validadeMeses;
+      p.dataUltimaTroca = dataUltimaTroca;
+      p.dataInstalacao = document.getElementById('pDataInstalacao').value;
+    }
+  } else {
+    state.purificadores.push({
+      id: 'p_' + Date.now(),
+      clienteId,
+      local,
+      marca,
+      modelo: document.getElementById('pModelo').value.trim(),
+      modeloRefil,
+      validadeMeses,
+      dataUltimaTroca,
+      dataInstalacao: document.getElementById('pDataInstalacao').value
+    });
+  }
+  salvar();
+  fecharModal('modalPurificador');
+  renderTudo();
+}
+
+function editarPurificador(id) {
+  let p = state.purificadores.find(x => x.id === id);
+  if(!p) return;
+  carregarSelectClientes();
+  document.getElementById('mPuriTitulo').innerText = 'Editar Purificador';
+  document.getElementById('pId').value = p.id;
+  document.getElementById('pClienteId').value = p.clienteId;
+  document.getElementById('pLocal').value = p.local;
+  document.getElementById('pMarca').value = p.marca;
+  document.getElementById('pModelo').value = p.modelo || '';
+  document.getElementById('pModeloRefil').value = p.modeloRefil || '';
+  document.getElementById('pValidadeMeses').value = p.validadeMeses || 6;
+  document.getElementById('pDataUltimaTroca').value = p.dataUltimaTroca || '';
+  document.getElementById('pDataInstalacao').value = p.dataInstalacao || '';
+  abrirModal('modalPurificador');
+}
+
+function excluirPurificador(id) {
+  if(!confirm('Excluir este purificador?')) return;
+  state.purificadores = state.purificadores.filter(x => x.id !== id);
+  salvar();
+  renderTudo();
+}
+
+function carregarSelectPurificadoresTroca() {
+  let sel = document.getElementById('tPuriId');
+  sel.innerHTML = '<option value="">Selecione o purificador...</option>';
+  state.purificadores.forEach(p => {
+    let cli = state.clientes.find(c => c.id === p.clienteId) || { nome: 'N/D' };
+    sel.innerHTML += `<option value="${p.id}">${cli.nome} - ${p.marca} (${p.local})</option>`;
+  });
+}
+
+function abrirModalTroca() {
+  carregarSelectPurificadoresTroca();
+  document.getElementById('tDataTroca').value = new Date().toISOString().split('T')[0];
+  document.getElementById('tValidadeMeses').value = 6;
+  document.getElementById('tModeloRefil').value = '';
+  document.getElementById('tTecnico').value = '';
+  document.getElementById('tObs').value = '';
+  abrirModal('modalTroca');
+}
+
+function aoSelecionarPurificadorTroca() {
+  let pId = document.getElementById('tPuriId').value;
+  let p = state.purificadores.find(x => x.id === pId);
+  if(p) {
+    document.getElementById('tValidadeMeses').value = p.validadeMeses || 6;
+    document.getElementById('tModeloRefil').value = p.modeloRefil || '';
+  }
+}
+
+function trocarDireto(puriId) {
+  abrirModalTroca();
+  document.getElementById('tPuriId').value = puriId;
+  aoSelecionarPurificadorTroca();
+}
+
+function salvarTroca() {
+  let puriId = document.getElementById('tPuriId').value;
+  let dataTroca = document.getElementById('tDataTroca').value;
+  let validadeMeses = parseInt(document.getElementById('tValidadeMeses').value) || 6;
+
+  if(!puriId || !dataTroca) return alert('Selecione o purificador e a data!');
+
+  let p = state.purificadores.find(x => x.id === puriId);
+  if(p) {
+    p.dataUltimaTroca = dataTroca;
+    p.validadeMeses = validadeMeses;
+    if(document.getElementById('tModeloRefil').value.trim()) {
+      p.modeloRefil = document.getElementById('tModeloRefil').value.trim();
+    }
+  }
+
+  state.trocas.push({
+    id: 't_' + Date.now(),
+    puriId,
+    dataTroca,
+    validadeMeses,
+    modeloRefil: document.getElementById('tModeloRefil').value.trim(),
+    tecnico: document.getElementById('tTecnico').value.trim(),
+    obs: document.getElementById('tObs').value.trim()
+  });
+
+  salvar();
+  fecharModal('modalTroca');
+  renderTudo();
+  alert('Troca registrada com sucesso!');
+}
+
+function exportarDados() {
+  let json = JSON.stringify(state, null, 2);
+  let blob = new Blob([json], { type: 'application/json' });
+  let a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `refil_em_dia_backup_${new Date().toISOString().split('T')[0]}.json`;
+  a.click();
+}
+
+function importarDados() {
+  document.getElementById('importInput').click();
+}
+
+function processarImportacao(evt) {
+  let file = evt.target.files[0];
+  if(!file) return;
+
+  let reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      let data = JSON.parse(e.target.result);
+      if(data.clientes && data.purificadores) {
+        state = data;
+        salvar();
+        renderTudo();
+        alert('Dados importados com sucesso!');
+      } else {
+        alert('Arquivo de backup inválido.');
+      }
+    } catch(err) {
+      alert('Erro ao ler o arquivo JSON.');
+    }
+  };
+  reader.readAsText(file);
+}
+
+window.onload = carregar;
+</script>
+</body>
+</html>
